@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Projekt vanilla javascript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">	
+</head>
+<body>
+	<section class="addArticles">
+		<div class="addBox">
+			<form id="food">
+				<div class="title-input"><label for="">Żywnośc</label></div>
+				<input class="input-articles" type="text" placeholder="Produkt" name="articles">
+				<input class="input-costs" type="text" name="costs">
+				<button class="submitBtn" type="submit">Wyślij</button>
+			</form>
+			<form id="chemistry">
+				<div class="title-input"><label for="">Chemia</label></div>
+				<input class="input-articles" type="text" placeholder="Produkt" name="articles">
+				<input class="input-costs" type="text" name="costs">
+				<button class="submitBtn" type="submit">Wyślij</button>
+			</form>
+			<form id="entertainment">
+				<div class="title-input"><label for="">Rozrywka</label></div>
+				<input class="input-articles" type="text" placeholder="Produkt" name="articles">
+				<input class="input-costs" type="text" name="costs">
+				<button class="submitBtn" type="submit">Wyślij</button>
+			</form>
+			<form id="other">
+				<div class="title-input"><label for="">Inne</label></div>
+				<input class="input-articles" type="text" placeholder="Produkt" name="articles">
+				<input class="input-costs" type="text" name="costs">
+				<button class="submitBtn" type="submit">Wyślij</button>
+			</form>
+		</div>
+		<div class="product-box">
+			<div class="cost-box">
+				<div class="food-box">
+					<h2>Żywność</h2>
+					<ul class="list">
+
+					</ul>
+					<p>Suma: <span id="all-cost-food" class="all-cost-content"></span></p>
+				</div>
+			</div>
+			<div class="cost-box">
+				<div class="chemistry-box">
+					<h2>Chemia</h2>
+					<ul class="list">
+
+					</ul>
+					<p>Suma: <span id="all-cost-chemistry" class="all-cost-content"></span></p>
+				</div>
+			</div>
+			<div class="cost-box">
+				<div class="entertainment-box">
+					<h2>Rozrywka</h2>
+					<ul class="list">
+
+					</ul>
+					<p>Suma: <span id="all-cost-entertainment" class="all-cost-content"></span></p>
+				</div>
+			</div>
+			<div class="cost-box">
+				<div class="other-box">
+					<h2>Inne</h2>
+					<ul class="list">
+
+					</ul>
+					<p>Suma: <span id="all-cost-other" class="all-cost-content"></span></p>
+				</div>
+			</div>
+		</div>
+	</section>
+		<div class="create-bill">
+			<p>Łączna kwota zakupów: <span id="resume-cost"></span></p>
+			<input type="date" id="date" class="date">
+			<button class="bill-btn">Utwórz rachunek</button>
+		</div>
+	
+	
+	<section class="bill-history">
+			
+	</section>
+	<script src="scripts/food.js"></script>
+	<script src="scripts/chemistry.js"></script>
+	<script src="scripts/entertainment.js"></script>
+	<script src="scripts/other.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
