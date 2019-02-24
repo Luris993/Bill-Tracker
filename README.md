@@ -1,1 +1,1 @@
-# projekt-10
+# Aplikacja do śledzenia swoich wydatków 
