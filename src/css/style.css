@@ -1,0 +1,122 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(#86bbd8), color-stop(#6697bb), color-stop(#4a759d), color-stop(#32547f), to(#1d3461));
+  background: -o-linear-gradient(left top, #86bbd8, #6697bb, #4a759d, #32547f, #1d3461);
+  background: linear-gradient(to right bottom, #86bbd8, #6697bb, #4a759d, #32547f, #1d3461);
+  font-size: 30px; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.addArticles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .addArticles .product-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .addArticles .product-box .cost-box {
+      margin: 0 100px 0 0; }
+  .addArticles .addBox {
+    display: inline-block; }
+    .addArticles .addBox form {
+      margin: 10px; }
+      .addArticles .addBox form .title-input {
+        padding: 5px; }
+      .addArticles .addBox form .input-costs {
+        width: 10%;
+        border: solid #1E4098 2px;
+        vertical-align: middle; }
+      .addArticles .addBox form .input-articles {
+        height: 40px;
+        vertical-align: middle;
+        border: solid #1E4098 2px; }
+      .addArticles .addBox form .submitBtn {
+        height: 40px;
+        vertical-align: middle;
+        border: solid #1E4098 2px;
+        border-bottom-right-radius: 15px;
+        background: #1E4098;
+        color: #86BBD8;
+        font-weight: bold;
+        font-size: 0.7rem;
+        cursor: pointer; }
+
+.create-bill {
+  display: block;
+  margin: 30px; }
+  .create-bill .date {
+    border: solid #1E4098 2px;
+    border-bottom-right-radius: 15px; }
+  .create-bill .bill-btn {
+    border: solid #1E4098 2px;
+    border-bottom-right-radius: 15px;
+    background: #1E4098;
+    color: #86BBD8;
+    cursor: pointer;
+    font-size: 1rem; }
+
+.list-history {
+  margin: 0 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .list-history div {
+    display: inline-block;
+    margin: 0 20px; }
+
+.bill-history {
+  width: 80%;
+  margin: 30px auto; }
+  .bill-history .bill-box {
+    background: red;
+    margin: 10px;
+    padding: 0; }
+    .bill-history .bill-box .flex-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      border: solid #1E4098 2px;
+      background: #86BBD8; }
+      .bill-history .bill-box .flex-container .btn-delete {
+        border: solid #1E4098 2px;
+        background: #1E4098;
+        color: #86BBD8;
+        cursor: pointer; }
+      .bill-history .bill-box .flex-container .btn-hide {
+        border: solid #1E4098 2px;
+        background: #1E4098;
+        color: #86BBD8;
+        cursor: pointer; }
+    .bill-history .bill-box .date-bill {
+      padding: 0;
+      margin: 0; }
+
+.hidden {
+  display: none; }
+
+.unhidden {
+  display: block;
+  border: solid #1E4098 2px;
+  border-top: none;
+  background: #86BBD8; }
+  .unhidden p {
+    margin: 5px;
+    padding: 0; }

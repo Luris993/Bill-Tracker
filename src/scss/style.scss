@@ -1,0 +1,134 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100vh;
+	background: linear-gradient(to right bottom, #86bbd8, #6697bb, #4a759d, #32547f, #1d3461);
+	font-size: 30px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.addArticles {
+	display: flex;
+	justify-content: space-between;
+	.product-box {
+	display: flex;
+	justify-content: space-around;
+		.cost-box {
+			margin: 0 100px 0 0;
+		}
+  }
+	.addBox {
+		display: inline-block;
+		form {
+			margin: 10px;
+			.title-input {
+				padding: 5px;
+			}
+			.input-costs {
+				width: 10%; 
+				border: solid #1E4098 2px;
+				vertical-align: middle;
+			}
+			.input-articles {
+				height: 40px;
+				vertical-align: middle;
+				border: solid #1E4098 2px;
+				
+			}
+			.submitBtn {
+				height: 40px;
+				vertical-align: middle;
+				border: solid #1E4098 2px;
+				border-bottom-right-radius: 15px;
+				background: #1E4098;
+				color: #86BBD8;
+				font-weight: bold;
+				font-size: 0.7rem;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.create-bill {
+	display: block;
+	margin: 30px;
+	.date {
+		border: solid #1E4098 2px;
+		border-bottom-right-radius: 15px;
+	}
+	.bill-btn {
+		border: solid #1E4098 2px;
+		border-bottom-right-radius: 15px;
+		background: #1E4098;
+		color: #86BBD8;
+		cursor: pointer;
+		font-size: 1rem;
+	}
+}
+
+.list-history {
+	margin: 0 0 20px;
+	display: flex;
+	justify-content: space-around;
+	div {
+		display: inline-block;
+		margin: 0 20px;
+	}
+}
+
+.bill-history {
+	width: 80%;
+	margin: 30px auto;
+	.bill-box {
+	background: red;
+	margin: 10px;
+	padding: 0;
+		.flex-container {
+			display: flex;
+			justify-content: space-between;
+			border: solid #1E4098 2px;
+			background: #86BBD8;
+			.btn-delete {
+				border: solid #1E4098 2px;
+				background: #1E4098;
+				color: #86BBD8;
+				cursor: pointer;
+			}
+			.btn-hide {
+				border: solid #1E4098 2px;
+				background: #1E4098;
+				color: #86BBD8;
+				cursor: pointer;
+			}
+			
+		}
+		.date-bill {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+.hidden {
+	display: none;
+	
+}
+
+.unhidden {
+	display: block;
+	border: solid #1E4098 2px;
+	border-top: none;
+ 	background: #86BBD8;
+	p {
+		margin: 5px;
+		padding: 0;
+	}
+}
