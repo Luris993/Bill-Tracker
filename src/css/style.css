@@ -27,7 +27,20 @@ body {
           flex-direction: column; }
   .addArticles .resume-cost {
     -ms-flex-item-align: start;
-        align-self: flex-start; }
+        align-self: flex-start;
+    margin: 0 0 0 10px; }
+    .addArticles .resume-cost .save-bill-btn {
+      height: 40px;
+      padding: 0 50px;
+      vertical-align: middle;
+      border: solid #1E4098 2px;
+      border-bottom-right-radius: 15px;
+      background: #1E4098;
+      color: #86BBD8;
+      font-weight: bold;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      cursor: pointer; }
   .addArticles .product-box {
     display: -webkit-box;
     display: -ms-flexbox;
