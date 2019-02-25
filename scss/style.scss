@@ -23,6 +23,20 @@ body {
 	flex-direction: column;
 	.resume-cost {
 		align-self: flex-start;
+		margin: 0 0 0 10px;
+		.save-bill-btn {
+			height: 40px;
+			padding: 0 50px;
+			vertical-align: middle;
+			border: solid #1E4098 2px;
+			border-bottom-right-radius: 15px;
+			background: #1E4098;
+			color: #86BBD8;
+			font-weight: bold;
+			font-size: 0.7rem;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
 	}
 	.product-box {
 	display: flex;

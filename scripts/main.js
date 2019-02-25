@@ -21,10 +21,12 @@ let resumeSum = 0;
 //UKRYWANIE I POKAZYWANIE INPUTÓW
 
 function showInputs() {
-	
+	const date = document.querySelector('#date').value;
 	
 	if (date) {
 		inputSection.classList.add('addArticles');
+	} else {
+		alert("ustaw datę");
 	}
 }
 
