@@ -9,7 +9,11 @@
 	<link rel="stylesheet" href="css/style.css">	
 </head>
 <body>
-	<section class="addArticles">
+	<div class="create-bill">
+			<input type="date" id="date" class="date">
+			<button class="bill-btn">Utwórz rachunek</button>
+	</div>
+	<section class="addArticlesHidden">
 		<div class="addBox">
 			<form id="food">
 				<div class="title-input"><label for="">Żywnośc</label></div>
@@ -43,7 +47,7 @@
 					<ul class="list">
 
 					</ul>
-					<p>Suma: <span id="all-cost-food" class="all-cost-content"></span></p>
+					<p>Suma: <span id="all-cost-food" class="all-cost-content">0</span></p>
 				</div>
 			</div>
 			<div class="cost-box">
@@ -52,7 +56,7 @@
 					<ul class="list">
 
 					</ul>
-					<p>Suma: <span id="all-cost-chemistry" class="all-cost-content"></span></p>
+					<p>Suma: <span id="all-cost-chemistry" class="all-cost-content">0</span></p>
 				</div>
 			</div>
 			<div class="cost-box">
@@ -61,7 +65,7 @@
 					<ul class="list">
 
 					</ul>
-					<p>Suma: <span id="all-cost-entertainment" class="all-cost-content"></span></p>
+					<p>Suma: <span id="all-cost-entertainment" class="all-cost-content">0</span></p>
 				</div>
 			</div>
 			<div class="cost-box">
@@ -70,18 +74,15 @@
 					<ul class="list">
 
 					</ul>
-					<p>Suma: <span id="all-cost-other" class="all-cost-content"></span></p>
+					<p>Suma: <span id="all-cost-other" class="all-cost-content">0</span></p>
 				</div>
 			</div>
 		</div>
-	</section>
-		<div class="create-bill">
-			<p>Łączna kwota zakupów: <span id="resume-cost"></span></p>
-			<input type="date" id="date" class="date">
-			<button class="bill-btn">Utwórz rachunek</button>
+		<div class="resume-cost">
+		<p>Łączna kwota zakupów: <span id="resume-cost"></span></p>
+		<button class="save-bill-btn">zapisz</button>
 		</div>
-	
-	
+	</section>
 	<section class="bill-history">
 			
 	</section>

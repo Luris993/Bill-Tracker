@@ -14,9 +14,16 @@ body {
 	padding: 0;
 }
 
+.addArticlesHidden {
+	display: none;
+}
+
 .addArticles {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	.resume-cost {
+		align-self: flex-start;
+	}
 	.product-box {
 	display: flex;
 	justify-content: space-around;

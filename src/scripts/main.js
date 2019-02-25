@@ -8,12 +8,25 @@ const	inputArticles = document.querySelectorAll('form .input-articles');
 const	inputCosts = document.querySelectorAll('form .input-costs');
 
 const bill = document.querySelector('#resume-cost');
-const createBtn = document.querySelector('.bill-btn');
+const saveBill = document.querySelector('.save-bill-btn');
 const sectionBill = document.querySelector('.bill-history');
+const createBtn = document.querySelector('.bill-btn');
+const inputSection = document.querySelector('.addArticlesHidden');
 
 let allArrays;
 let sum = 0;
 let resumeSum = 0;
+
+
+//UKRYWANIE I POKAZYWANIE INPUTÓW
+
+function showInputs() {
+	
+	
+	if (date) {
+		inputSection.classList.add('addArticles');
+	}
+}
 
 // CZYSCZENIE INPUTÓW
 
@@ -51,9 +64,8 @@ function resetInputs(){
 function createBill() {
 	const date = document.querySelector('#date').value;
 	
-	if (date) {
-	
-	const deleteSum = document.querySelectorAll('.all-cost-content');
+	const costBox = document.querySelector('.addArticles .product-box');
+	const deleteSum = costBox.querySelectorAll('.all-cost-content');
 	const list = document.querySelectorAll('.cost-box .list');
 	
 	const billBox = document.createElement('div');
@@ -70,7 +82,7 @@ function createBill() {
 	
 	
 	for(let i = 0; i<deleteSum.length; i++) {
-		deleteSum[i].innerHTML = "";
+		deleteSum[i].innerHTML = "0";
 	}
 	
 	for(let i = 0; i<list.length; i++) {
@@ -93,9 +105,8 @@ function createBill() {
 		})
 
 	});
-} else {
-	alert('Uzupełnij Datę!!!');
-}
+
+	inputSection.classList.remove('addArticles');
 	
 }
 
@@ -202,6 +213,7 @@ formOther.addEventListener('submit', function(e){
 	resetInputs();
 });
 
-createBtn.addEventListener('click', createBill, false);
+saveBill.addEventListener('click', createBill, false);
+createBtn.addEventListener('click', showInputs, false);
 	
 	
