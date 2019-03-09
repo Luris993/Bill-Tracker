@@ -12,6 +12,7 @@ const saveBill = document.querySelector('.save-bill-btn');
 const sectionBill = document.querySelector('.bill-history');
 const createBtn = document.querySelector('.bill-btn');
 const inputSection = document.querySelector('.addArticlesHidden');
+const monthContent = document.querySelector('.create-section .month-name-row');
 
 let allArrays;
 let sum = 0;
@@ -110,30 +111,124 @@ function createBill() {
 
 	inputSection.classList.remove('addArticles');
 	
+	monthCosts();
+	
+}
+
+// ŁĄCZNE MIESIĘCZNE WYDATKI !! 
+
+// ***************************************************
+
+function monthCosts() {
+	const date = document.querySelector('#date').value;
+	
+	const CalendarDate = new Date(date).getUTCMonth();
+	
+	const currentDate = new Date();
+	const currentMonth = currentDate.getMonth(); 
+	
+	const getMonth = new Date(date).getUTCMonth();
+	const monthNumber = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 										'Maj', 'Czewiec', 'Lipiec', 'Sierpień', 'Wrzesień', 											'Październik', 'Listopad', 'Grudzień',],
+				nameMonth = monthNumber[getMonth];
+	
+	
+	foodMonthCost = foodMonthCost.map(Number);
+	chemistryMonthCost = chemistryMonthCost.map(Number);
+	entertainmentMonthCost = entertainmentMonthCost.map(Number);
+	otherMonthCost = otherMonthCost.map(Number);
+	
+	if (CalendarDate === currentMonth) {
+	
+		if (foodMonthCost == "") {
+		} else {
+			let TotalSumFood = foodMonthCost.reduce(function(a, b) {
+			return a + b;
+			});
+
+			document.querySelector('.month-food .month-costs-sum').innerHTML = TotalSumFood + " " + "zł";
+		}
+
+		if (chemistryMonthCost == "") {
+		} else {
+			let TotalSumChemistry = chemistryMonthCost.reduce(function(a, b) {
+			return a + b;
+			});
+
+			document.querySelector('.month-chemistry .month-costs-sum').innerHTML = TotalSumChemistry + " " + "zł";
+		}
+
+		if (entertainmentMonthCost == "") {
+		} else {
+			let TotalSumentertainment = entertainmentMonthCost.reduce(function(a, b) {
+			return a + b;
+			});
+
+			document.querySelector('.month-entertainment .month-costs-sum').innerHTML = TotalSumentertainment + " " + "zł";
+		}
+
+		if (otherMonthCost ==  "") {
+		} else {
+			let TotalSumOther = otherMonthCost.reduce(function(a, b) {
+			return a + b;
+			});
+
+			document.querySelector('.month-other .month-costs-sum').innerHTML = TotalSumOther + " " + "zł";
+		}
+		
+		let monthSum = [];
+		let monthExpenses = monthSum.concat(foodMonthCost, chemistryMonthCost, entertainmentMonthCost, otherMonthCost);
+		
+		monthExpenses = monthExpenses.reduce(function(a, b){
+			return a + b;
+		});
+		
+		document.querySelector('.name-actual-month').innerHTML = " " + nameMonth + " ";
+		
+		document.querySelector('.month-all-costs').innerHTML = "Łączna kwota:" + " " + monthExpenses + " " + "zł";
+	}
+		
 }
 
 // UKRYWANIE RACHUNKÓW
 
 function hiddeBill(e) {
 	
+	
+	
 	if (e.target !== e.currentTarget && e.target.className === "btn-hide") {
 		
-		const tgt = e.target;
+	  const tgt = e.target;
 		const content = tgt.parentElement.parentElement;
 		const contentModule = content.nextElementSibling;
 		
 		contentModule.classList.toggle('hidden');
 		contentModule.classList.toggle('unhidden');
 	}
+}
+
+function hideMonthCosts(e) {
+	
+	const articlesMonth = monthContent.nextElementSibling;
+	
+	articlesMonth.classList.toggle('hidden');
+	articlesMonth.classList.toggle('month-costs-row');
 	
 }
 
 // USUWANIE RACHUNKU
 
 function deleteBill(deleteBtn) {
+	
 	const parent = deleteBtn.parentNode;
 	const parentTwo = parent.parentNode.parentNode;
-  parentTwo.remove();  
+  parentTwo.remove();
+	
+	const sumChemistryCostBill = document.querySelectorAll('.bill-box .all-cost-chemistry');
+	
+	console.log(sumChemistryCostBill.innerHTML);
+	
+	
+	
 }
 
 // TWORZENIE RACHUNKU
@@ -217,5 +312,6 @@ formOther.addEventListener('submit', function(e){
 
 saveBill.addEventListener('click', createBill, false);
 createBtn.addEventListener('click', showInputs, false);
+monthContent.addEventListener('click', hideMonthCosts, false);
 	
 	

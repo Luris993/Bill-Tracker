@@ -9,10 +9,36 @@
 	<link rel="stylesheet" href="css/style.css">	
 </head>
 <body>
-	<div class="create-bill">
-			<input type="date" id="date" class="date">
-			<button class="bill-btn">Utwórz rachunek</button>
-	</div>
+	<section class="create-section">
+		<div class="create-bill">
+				<input type="date" id="date" class="date">
+				<button class="bill-btn">Utwórz rachunek</button>
+		</div>
+		<div class="month-costs">
+			<div class="month-name-row">
+				<h2 class="month-name">Wydatki<span class="name-actual-month"></span></h2>
+				<span class="month-all-costs"></span>
+			</div>
+			<div class="hidden">
+				<div class="month-food">
+					<h3>Żywność</h3>
+					<p class="month-costs-sum"></p>
+				</div>
+				<div class="month-chemistry">
+					<h3>Chemia</h3>
+					<p class="month-costs-sum"></p>
+				</div>
+				<div class="month-entertainment">
+					<h3>Rozrywka</h3>
+					<p class="month-costs-sum"></p>
+				</div>
+				<div class="month-other">
+					<h3>Media i inne opłaty</h3>
+					<p class="month-costs-sum"></p>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="addArticlesHidden">
 		<div class="addBox">
 			<form id="food">
@@ -34,7 +60,7 @@
 				<button class="submitBtn" type="submit">Wyślij</button>
 			</form>
 			<form id="other">
-				<div class="title-input"><label for="">Inne</label></div>
+				<div class="title-input"><label for="">Media i inne opłaty</label></div>
 				<input class="input-articles" type="text" placeholder="Produkt" name="articles">
 				<input class="input-costs" type="text" name="costs">
 				<button class="submitBtn" type="submit">Wyślij</button>
@@ -47,7 +73,7 @@
 					<ul class="list">
 
 					</ul>
-					<p>Suma: <span id="all-cost-food" class="all-cost-content">0</span></p>
+					<p>Suma: <span class="all-cost-food all-cost-content">0</span></p>
 				</div>
 			</div>
 			<div class="cost-box">
@@ -56,7 +82,7 @@
 					<ul class="list">
 
 					</ul>
-					<p>Suma: <span id="all-cost-chemistry" class="all-cost-content">0</span></p>
+					<p>Suma: <span class="all-cost-chemistry all-cost-content">0</span></p>
 				</div>
 			</div>
 			<div class="cost-box">
@@ -65,16 +91,16 @@
 					<ul class="list">
 
 					</ul>
-					<p>Suma: <span id="all-cost-entertainment" class="all-cost-content">0</span></p>
+					<p>Suma: <span class="all-cost-entertainment all-cost-content">0</span></p>
 				</div>
 			</div>
 			<div class="cost-box">
 				<div class="other-box">
-					<h2>Inne</h2>
+					<h2>Media i inne opłaty</h2>
 					<ul class="list">
 
 					</ul>
-					<p>Suma: <span id="all-cost-other" class="all-cost-content">0</span></p>
+					<p>Suma: <span class="all-cost-other all-cost-content">0</span></p>
 				</div>
 			</div>
 		</div>

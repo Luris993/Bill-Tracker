@@ -1,7 +1,8 @@
 const food = document.querySelector('.food-box');
-const sumFoodCost = document.querySelector('#all-cost-food');
+const sumFoodCost = document.querySelector('.all-cost-food');
 
 let foodCost = [];
+let foodMonthCost = [];
 
 function addFoodList() {
 	
@@ -10,6 +11,8 @@ function addFoodList() {
 	
 	
 	foodCost.push(inputCosts[0].value.replace(/,/g, '.'));
+	
+	foodMonthCost.push(inputCosts[0].value.replace(/,/g, '.'));
 	
 	for (let i = 0; i < foodCost.length; i++){
 	sum += parseFloat(foodCost[i]);
