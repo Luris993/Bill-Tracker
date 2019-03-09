@@ -223,12 +223,6 @@ function deleteBill(deleteBtn) {
 	const parentTwo = parent.parentNode.parentNode;
   parentTwo.remove();
 	
-	const sumChemistryCostBill = document.querySelectorAll('.bill-box .all-cost-chemistry');
-	
-	console.log(sumChemistryCostBill.innerHTML);
-	
-	
-	
 }
 
 // TWORZENIE RACHUNKU
