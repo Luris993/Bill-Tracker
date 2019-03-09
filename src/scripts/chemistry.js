@@ -1,7 +1,8 @@
 const chemistry = document.querySelector('.chemistry-box');
-const sumChemistryCost = document.querySelector('#all-cost-chemistry');
+const sumChemistryCost = document.querySelector('.all-cost-chemistry');
 
 let chemistryCost = [];
+let chemistryMonthCost = [];
 
 function addChemistryList() {
 	
@@ -10,6 +11,8 @@ function addChemistryList() {
 	
 	
 	chemistryCost.push(inputCosts[1].value.replace(/,/g, '.'));
+	
+	chemistryMonthCost.push(inputCosts[1].value.replace(/,/g, '.'));
 	
 	for (let i = 0; i < chemistryCost.length; i++){
 	sum += parseFloat(chemistryCost[i]);

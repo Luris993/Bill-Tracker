@@ -14,6 +14,42 @@ body {
 	padding: 0;
 }
 
+.create-section {
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	.month-name-row {
+		display: flex;
+		justify-content: space-between;
+		border: solid #1E4098 2px;
+		background: #86BBD8; 
+		padding: 5px;
+		cursor: pointer;
+		h2 {
+			margin: 0;
+			font-size: 1rem;
+			display: inline-block;
+		}
+	}
+	.month-costs {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		width: 65%;
+		.month-costs-row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			border: solid #1E4098 2px;
+			border-top: 0;
+			background: #86BBD8;
+			> div {
+				margin: 0 110px 0 0;
+			}
+		}
+	}
+}
+
 .addArticlesHidden {
 	display: none;
 }

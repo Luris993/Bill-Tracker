@@ -1,7 +1,8 @@
 const entertainment = document.querySelector('.entertainment-box');
-const sumEntertainmentCost = document.querySelector('#all-cost-entertainment');
+const sumEntertainmentCost = document.querySelector('.all-cost-entertainment');
 
 let entertainmentCost = [];
+let entertainmentMonthCost = [];
 
 function addEntertaimentList() {
 	
@@ -10,6 +11,8 @@ function addEntertaimentList() {
 	
 	
 	entertainmentCost.push(inputCosts[2].value.replace(/,/g, '.'));
+	
+	entertainmentMonthCost.push(inputCosts[2].value.replace(/,/g, '.'));
 	
 	for (let i = 0; i < entertainmentCost.length; i++){
 	sum += parseFloat(entertainmentCost[i]);

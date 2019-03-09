@@ -14,6 +14,58 @@ body {
   margin: 0;
   padding: 0; }
 
+.create-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
+  .create-section .month-name-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: solid #1E4098 2px;
+    background: #86BBD8;
+    padding: 5px;
+    cursor: pointer; }
+    .create-section .month-name-row h2 {
+      margin: 0;
+      font-size: 1rem;
+      display: inline-block; }
+  .create-section .month-costs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 65%; }
+    .create-section .month-costs .month-costs-row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      border: solid #1E4098 2px;
+      border-top: 0;
+      background: #86BBD8; }
+      .create-section .month-costs .month-costs-row > div {
+        margin: 0 110px 0 0; }
+
 .addArticlesHidden {
   display: none; }
 
